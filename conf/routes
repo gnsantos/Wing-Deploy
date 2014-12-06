@@ -1,0 +1,31 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+
+GET     /signup                     controllers.Redirect.signUp()
+
+GET     /comments                   controllers.Redirect.comments()
+
+GET     /submissions                controllers.Redirect.submissions()
+
+GET     /codes                      controllers.Consultas.getAllCodes()
+
+GET     /codecomments               controllers.Consultas.getAllComments(codeName)
+
+GET     /download                   controllers.FileHandlers.downloadFile(filename)
+
+POST    /search                     controllers.Consultas.searchCodesByDescription()
+
+POST    /user                       controllers.UserAdder.addUser()
+
+POST    /submit                     controllers.FileHandlers.addCode()
+
+POST    /comment                    controllers.CommentAdder.addRanking()
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

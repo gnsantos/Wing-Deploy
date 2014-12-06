@@ -1,0 +1,26 @@
+@main("Sign up!"){
+    <div class="components-container">
+        <h1>User Registration</h1>
+        <form action="@routes.UserAdder.addUser()" role="form" method="post" xmlns="http://www.w3.org/1999/html">
+            <div class="form-group">
+                <label for="inputusername">Username:</label>
+                <input id="inputusername" class="form-control" type="text" name="username" placeholder="Type username here" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="inputemail">Email:</label>
+                <input id="inputemail" class="form-control" type="email" name="email" placeholder="Type email here" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="inputpassword">Password:</label>
+                <input id="inputpassword" class="form-control" type="password" name="password" placeholder="Password" required="">
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-default">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+}

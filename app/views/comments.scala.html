@@ -1,0 +1,34 @@
+@main("Comment a Code!"){
+    <div class="components-container">
+        <h1>Comment a Code</h1>
+        <form action="@routes.CommentAdder.addRanking()" method="post">
+            <div class="form-group">
+                <label for="codename">Code's name:</label>
+                <input id="codename" class="form-control" type="text" name="codename" placeholder="Type code's name" required>
+            </div>
+
+            <div class="radio">
+                <label>
+                    <input type="radio" name="like" id="optionsRadios1" value="like">
+                    Like
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="like" id="optionsRadios2" value="deslike" checked>
+                    Dislike
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label for="comment">Comment:</label>
+                <textarea id = "comment" class="form-control" type="text" name="comment" rows="6" maxlength="2000" placeholder="Insert your comment here!">
+                </textarea>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-default">Comment</button>
+            </div>
+        </form>
+    </div>
+}

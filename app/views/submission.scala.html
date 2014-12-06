@@ -1,0 +1,61 @@
+@main("Submit Your Code!"){
+    <div class="overlay" style="display:none"></div>
+    <div class="components-container" id="sub-container">
+        <h1>Code Submission</h1>
+        <form action="@routes.FileHandlers.addCode()" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="inputfile">File:</label>
+                <input id="inputfile" type="file" class="upload" name="file" required>
+            </div>
+
+            <div class="form-group">
+                <label for="inputfilename">Name:</label>
+                <input id="inputfilename" class="form-control" type="text" name="filename" placeholder="Type your program's name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="inputlang">Language:</label>
+                <input id = "inputlang" class="form-control" type="text" name="language" placeholder="Type PL" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id = "description" class="form-control" type="text" name="description" rows="6" cols="30" maxlength="2000" placeholder="Insert your description here!" required>
+                </textarea>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-default" id="OnAdd" >Submit</button>
+            </div>
+
+            <div style="display:none" id="confirm">
+                <div class="wrapper" id="confirmation-wrapper">
+                    <div class="form-group">
+                        <label for="inputusername">Username:</label>
+                        <input id = "inputusername" class="form-control" type="text" name="submitter" placeholder="Type username here" required/>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputpassword">Password:</label>
+                        <input id="inputpassword" class="form-control" type="password" name="password" placeholder="Password" required="">
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-default">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+}
+
+<script>
+    $( "#OnAdd" ).click(function(){
+        $( ".overlay" ).show( "slow" );
+        $( "#confirm" ).show( "slow" );
+    });
+    $( ".overlay").click(function(){
+        $( ".overlay" ).hide();
+        $( "#confirm" ).hide();
+    });
+</script>

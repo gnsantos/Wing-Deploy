@@ -1,0 +1,25 @@
+@(message: String)
+
+@if(message == "AddCodeError"){
+<script> alert("User entered as submitter does not exist!");</script>
+}
+
+@if(message == "AddUserError"){
+<script> alert("Username already exists!"); </script>
+}
+
+@if(message == "AddCommentError"){
+<script> alert("Trying to add comment for non-existing code!") </script>
+}
+
+@if(message == "WrongPassword"){
+<script> alert("Wrong password!"); </script>
+}
+
+@if(message == "InvalidFileError"){
+<script> alert("Unable to get file!"); </script>
+}
+
+@if(message == "DownloadError"){
+<script> alert("Unable download file!"); </script>
+}

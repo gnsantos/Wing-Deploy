@@ -1,0 +1,141 @@
+html, body {
+/*
+    background: -webkit-linear-gradient(to bottom, #DD995F, #FFBB81 20%);
+    background: -o-linear-gradient(to bottom, #DD995F, #FFBB81 20%);
+    background: -moz-linear-gradient(to bottom, #DD995F, #FFBB81 20%);
+    background: linear-gradient(to bottom, #DD995F, #FFBB81 20%); */
+    background: #e1f5fe;
+    margin: 0;
+    min-height: 100%;
+    /*#FFBB81*/
+}
+
+body {
+    position: relative;
+    min-height: 1000px;
+    padding: 50px;
+    color: #424242;
+}
+
+/*
+#confirm {
+    position:relative;
+    display: inline-block;
+    vertical-align:middle;
+    text-align:left;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+*/
+
+#logo {
+    font-size: 250%;
+    font-family: eddieRounded;
+}
+
+.forms{
+    display:inline;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* just some content with arbitrary styles for explanation purposes */
+#confirm {
+    min-width: 25%;
+    min-height: 25%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -12.5%;
+    margin-left: -12.5%;
+    background-color: #6FADFC;
+    color:#FFFFFF;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 11; /* 1px higher than the overlay layer */
+}
+
+
+#confirmation-wrapper {
+    position: relative;
+    padding:10px;
+}
+
+.components-container  {
+    padding: 5% 2% 100%;
+    max-width: 40%;
+    margin: auto;
+    margin-top: 5%;
+    background-image:url(light_wool.png);
+    box-shadow: 0px 5px 10px 0px;
+    border-radius: 40px;
+
+}
+
+.search-container  {
+    text-align: center;
+    padding: 12.5% 2% 100%;
+    max-width: 40%;
+    margin: auto;
+    margin-top: 5%;
+    background-image:url(light_wool.png);
+    border-radius: 40px;
+    box-shadow: 0px 5px 10px 0px;
+}
+
+.results-container  {
+    text-align: center;
+    padding: 12.5% 2% 100%;
+    max-width: 100%;
+    margin: auto;
+    margin-top: 5%;
+    background-image:url(light_wool.png);
+    border-radius: 40px;
+    box-shadow: 0px 5px 10px 0px;
+}
+
+#search-form {
+    position:relative;
+}
+
+#searchinput {
+    position: inherit;
+    display: inline;
+    max-width:80%
+}
+
+#searchbutton {
+    position: inherit;
+    display: inline;
+    margin-bottom:5px;
+    width: 15%;
+    background-color: #0288d1;
+    color: #FFFFFF;
+}
+
+#opinion_good, #opinion_bad {
+    display:inline;
+    width: 10%;
+}
+
+@font-face {
+    font-family: eddieRounded;
+    src: url(EddieRounded.ttf);
+}
+
+.btn {
+    color: #EEEEEE;
+    background: #00c853;
+}
+.btn:hover {
+    color: #424242;
+    background: #00c853;
+}

@@ -1,0 +1,32 @@
+@(message: String)
+
+@main("Welcome to WING!") {
+
+<div>
+
+    <div class="search-container" id="search-container">
+        <p id="logo">Search on WinG</p>
+        <form action="@routes.Consultas.searchCodesByDescription()" class="form-horizontal" method="post" xmlns="http://www.w3.org/1999/html">
+            <div class="form-group" id="search-form">
+                <input type="text" class="form-control" id="searchinput" placeholder="Type the description!" name="search" required>
+                <input type="button" class="btn btn-default" id="searchbutton" value="Search">
+            </div>
+        </form>
+        <div>
+            <button class="btn btn-default btn-lg" id="buttonallcodes">See All Codes!</button>
+            <script type="text/javascript">
+            document.getElementById("buttonallcodes").onclick = function(){
+            location.href = "@routes.Consultas.getAllCodes()";
+            }
+        </script>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="@routes.Assets.at("javascripts/hello.js")" type="text/javascript"></script>
+
+@popup(message)
+
+}
